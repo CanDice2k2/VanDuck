@@ -1,0 +1,31 @@
+/* Ẩn checkbox */
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Tùy chỉnh kiểu của label */
+label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px; /* Khoảng cách giữa label và biểu tượng */
+}
+
+/* Tạo biểu tượng tích */
+label:before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Hiển thị tích khi checkbox được chọn */
+input[type="checkbox"]:checked + label:before {
+    content: '\2713'; /* Mã Unicode của biểu tượng tích */
+    text-align: center;
+    line-height: 20px; /* Để chữ nằm giữa */
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Trang làm bài thi</h1>
+  <div>
+    <h2>Loại câu hỏi 1</h2>
+    <h3>Câu 1</h3>
+    <div class="answer">
+      <input name="an" type="radio" id="answer1">
+      <label for="answer1">Đáp án 1</label>
+      <input name="an" type="radio" id="answer1">
+      <label for="answer1">Đáp án 2</label>
+      <input name="an" type="radio" id="answer1">
+      <label for="answer1">Đáp án 3</label>
+      <input name="an" type="radio" id="answer1">
+      <label for="answer1">Đáp án 4</label>
+    </div>
+
+    <h3>Câu 2</h3>
+    <div class="answer">
+      <input name="an" type="radio" id="answer1">
+      <label for="answer1">Đáp án 1</label>
+      <input name="an" type="radio" id="answer1">
+      <label for="answer1">Đáp án 2</label>
+      <input name="an" type="radio" id="answer1">
+      <label for="answer1">Đáp án 3</label>
+      <input name="an" type="radio" id="answer1">
+      <label for="answer1">Đáp án 4</label>
+    </div>
+
+    <h3>Câu 3</h3>
+    <div class="answer">
+      <input name="an" type="radio" id="answer1">
+      <label for="answer1">Đáp án 1</label>
+      <input name="an" type="radio" id="answer1">
+      <label for="answer1">Đáp án 2</label>
+      <input name="an" type="radio" id="answer1">
+      <label for="answer1">Đáp án 3</label>
+      <input name="an" type="radio" id="answer1">
+      <label for="answer1">Đáp án 4</label>
+    </div>
+
+    <h3>Câu 4</h3>
+    <div class="answer">
+      <input name="an" type="radio" id="answer1">
+      <label for="answer1">Đáp án 1</label>
+      <input name="an" type="radio" id="answer1">
+      <label for="answer1">Đáp án 2</label>
+      <input name="an" type="radio" id="answer1">
+      <label for="answer1">Đáp án 3</label>
+      <input name="an" type="radio" id="answer1">
+      <label for="answer1">Đáp án 4</label>
+    </div>
+  </div>
+  <button type="submit" id="submit-btn"> Hoàn thành</button>
+  <script>
+    document.getElementById('submit-btn').addEventListener('click', function () {
+      // Lấy giá trị của câu trả lời đã chọn
+      var selectedAnswer = document.querySelector('input[name="an"]:checked').value;
+
+      // Chuyển hướng sang trang khác cùng với tham số kết quả đã chọn
+      window.location.href = `result.html?answer=${selectedAnswer}`;
+    });
+  </script>
+</body>
+
+</html>
